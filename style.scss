@@ -13,7 +13,7 @@ html {
 .layout-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 10px; 
+    gap: 10px 10px; 
 
     @media (max-width:48em) {
       grid-template-columns: 1fr;
@@ -21,6 +21,31 @@ html {
       margin: 0 auto;
     }
 }
+
+.btn-container {
+  display:grid;
+  place-items: center;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  width: fit-content;
+  padding: 10px 25px;
+  outline: 1px solid;
+  border-radius: 50px;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+     background: #0000c9;
+     outline: none;
+     color: rgba(225,255,255,1);
+  }
+ }
+
+.pfe-btn {
+  @extend .btn;
+} 
 
 img {
   display: block;
@@ -89,19 +114,7 @@ img {
   }
 
   &__btn {
-     display: inline-block;
-     text-decoration: none;
-     width: fit-content;
-     padding: 10px 25px;
-     outline: 1px solid;
-     border-radius: 50px;
-     transition: all .3s ease-in-out;
-
-     &:hover {
-        background: #0000c9;
-        outline: none;
-        color: rgba(225,255,255,1);
-     }
+    @extend .btn;
   }
 }
 
