@@ -13,7 +13,7 @@ html {
 .layout-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 10px 10px;
 }
 @media (max-width: 48em) {
   .layout-container {
@@ -21,6 +21,27 @@ html {
     max-width: 95%;
     margin: 0 auto;
   }
+}
+
+.btn-container {
+  display: grid;
+  place-items: center;
+}
+
+.btn, .card__btn, .pfe-btn {
+  display: inline-block;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 25px;
+  outline: 1px solid;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover, .card__btn:hover, .pfe-btn:hover {
+  background: #0000c9;
+  outline: none;
+  color: rgb(225, 255, 255);
 }
 
 img {
@@ -58,11 +79,6 @@ img {
 .card__media.center {
   margin: 0 auto;
 }
-@media (max-width: 48em) {
-  .card__media img {
-    width: 100%;
-  }
-}
 .card__text {
   padding: 1em;
 }
@@ -83,25 +99,6 @@ img {
 .card__description {
   margin: 1em 0;
 }
-.card__btn__container {
-  margin-top: 1em;
-}
-.card__btn {
-  display: inline-block;
-  text-decoration: none;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 10px 25px;
-  outline: 1px solid;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-}
-.card__btn:hover {
-  background: #0000c9;
-  outline: none;
-  color: rgb(225, 255, 255);
-}
-
 .link__list {
   display: block;
   width: 100%;
@@ -127,4 +124,4 @@ img {
   height: 0.063rem;
   margin-top: 4px;
   background-color: rgb(0, 0, 0);
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style-AMRAPXwzg7qDnxO.css.map */
